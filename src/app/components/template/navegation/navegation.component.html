@@ -1,0 +1,35 @@
+<mat-sidenav-container class="sidenav-container mat-typography" autosize>
+    <mat-sidenav #sidenav mode="side" disableClose="true" opened fixedInViewport="true" fixedTopGap="64" class="side-sidenav">
+      <mat-nav-list class="mat-list">
+        <mat-list-item  routerLink="/">
+          <mat-icon mat-list-icon>dashboard</mat-icon>
+          <a mat-line  *ngIf="isExpanded">Dashboard</a>
+        </mat-list-item>
+        <mat-list-item routerLink="products" >
+          <mat-icon mat-list-icon >storefront</mat-icon>
+            <a mat-line *ngIf="isExpanded" >Produtos</a>
+        </mat-list-item>
+        <mat-list-item>
+          <mat-icon mat-list-icon>science</mat-icon>
+          <h4 mat-line *ngIf="isExpanded">Insumos</h4>
+        </mat-list-item>
+        <mat-list-item>
+          <mat-icon mat-list-icon>local_shipping</mat-icon>
+          <h4 mat-line *ngIf="isExpanded">Fornecedor</h4>
+        </mat-list-item>
+        <mat-list-item>
+          <mat-icon mat-list-icon>trending_up</mat-icon>
+          <h4 mat-line *ngIf="isExpanded">Relatórios</h4>
+        </mat-list-item>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content class="content">
+        <div class="info-row">
+            <button mat-icon-button (click)="isExpanded = !isExpanded"  style="margin: 10px;">
+                <mat-icon aria-label="Menu">menu</mat-icon>
+            </button>
+            <span>Dashboard</span>
+        </div>
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>
