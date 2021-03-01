@@ -1,3 +1,11 @@
 table{
     width: 100%;
 }
+
+.edit-icon-color{
+    color: #d9cd26;
+    margin-right: 10px;
+}
+.delete-icon-color{
+    color: #e35e6b
+}
